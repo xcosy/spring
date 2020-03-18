@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context" xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- 配置组件扫描 -->
+    <context:component-scan base-package="com.codedancing.spring5.cdmedia.impl"/>
+
+    <!-- Bean 配置-->
+    <bean id="zhouDisc" class="com.codedancing.spring5.cdmedia.impl.ZhouDisc" p:title="zhouDisc" p:artist="zhou" primary="true">
+        <property name="tracks">
+            <list>
+                <value>song_01</value>
+                <value>song_02</value>
+                <value>song_03</value>
+            </list>
+        </property>
+    </bean>
+    <bean id="wangDisc" class="com.codedancing.spring5.cdmedia.impl.WangDisc"/>
+
+</beans>
